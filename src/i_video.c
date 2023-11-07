@@ -1774,7 +1774,7 @@ void I_RestartGraphics(const bool recreatewindow)
 void I_ToggleFullscreen(const bool output)
 {
     if (SDL_SetWindowFullscreen(window,
-        (vid_fullscreen ? 0 : (vid_borderlesswindow ? SDL_WINDOW_FULLSCREEN_DESKTOP : SDL_WINDOW_FULLSCREEN))) < 0)
+        (vid_fullscreen ? 0 : (vid_borderlesswindow ? 0 : 0))) < 0)
     {
         menuactive = false;
         C_ShowConsole();
@@ -1782,7 +1782,7 @@ void I_ToggleFullscreen(const bool output)
         return;
     }
 
-    vid_fullscreen = !vid_fullscreen;
+    vid_fullscreen = false; // !vid_fullscreen;
     I_RestartGraphics(vid_fullscreen && !vid_borderlesswindow);
     M_SaveCVARs();
 
