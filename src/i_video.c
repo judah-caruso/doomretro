@@ -462,15 +462,15 @@ static void I_GetEvent(void)
 
                         case SDL_WINDOWEVENT_FOCUS_LOST:
                         case SDL_WINDOWEVENT_MINIMIZED:
-                            windowfocused = false;
+                            // windowfocused = false;
 
-                            if (!s_musicinbackground)
-                                S_PauseMusic();
+                            // if (!s_musicinbackground)
+                            //     S_PauseMusic();
 
-                            if (gamestate == GS_LEVEL && !menuactive && !consoleactive && !paused)
-                                sendpause = true;
+                            // if (gamestate == GS_LEVEL && !menuactive && !consoleactive && !paused)
+                            //     sendpause = true;
 
-                            I_ShutdownKeyboard();
+                            // I_ShutdownKeyboard();
                             break;
 
                         case SDL_WINDOWEVENT_EXPOSED:

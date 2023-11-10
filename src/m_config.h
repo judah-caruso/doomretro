@@ -748,9 +748,9 @@ enum
 
 #define vid_borderlesswindow_default       true
 
-#define vid_capfps_min                     0
-#define vid_capfps_default                 200
-#define vid_capfps_max                     1000
+#define vid_capfps_min                     TICRATE
+#define vid_capfps_default                 TICRATE
+#define vid_capfps_max                     TICRATE
 
 #define vid_display_min                    1
 #define vid_display_default                1
